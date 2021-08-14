@@ -10,6 +10,7 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
+  trailingSlash: false,
   organizationName: 'llama-bot', // Usually your GitHub org/user name.
   projectName: 'llama-bot-docs', // Usually your repo name.
   themeConfig: {
