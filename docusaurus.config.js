@@ -5,13 +5,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Llama Bot Documentation',
   tagline: '',
-  url: 'https://doc.llama.developomp.com',
-  baseUrl: '/',
+  url: 'https://llama-bot.github.io',
+  baseUrl: '/llama-bot-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
   organizationName: 'llama-bot', // Usually your GitHub org/user name.
-  projectName: 'llama-bot', // Usually your repo name.
+  projectName: 'llama-bot-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Llama Bot',
