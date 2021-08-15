@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Intro
 
+:::warning
+**UNDER DEVELOPMENT. Not even pre-alpha**
+:::
+
 :::info
 This documentation is for **developers**.<br />
 If you are a user and only want to learn how to use it, go to the [**Usage**](/docs/usage/overview) section.
