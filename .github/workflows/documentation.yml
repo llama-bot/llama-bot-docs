@@ -42,7 +42,7 @@ jobs:
           USE_SSH: true
           GIT_USER: developomp
         run: |
-          git config --global user.email "developomp@github.com"
+          git config --global user.email "developomp@gmail.com"
           git config --global user.name "developomp"
           if [ -e yarn.lock ]; then
             yarn install --frozen-lockfile
