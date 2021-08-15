@@ -33,10 +33,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - uses: shimataro/ssh-key-action@v2
+      - uses: webfactory/ssh-agent@v0.5.3
         with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
