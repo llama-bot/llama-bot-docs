@@ -40,7 +40,7 @@ jobs:
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
-          GIT_USER: git
+          GIT_USER: developomp
         run: |
           git config --global user.email "developomp@github.com"
           git config --global user.name "developomp"
