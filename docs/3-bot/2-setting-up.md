@@ -76,7 +76,7 @@ After following all the [steps](#steps), run the following command to start the 
 yarn start
 ```
 
-If everything is set up correctly, this should start the bot and load all the cogs. [Web Interface](/docs/web-interface/overview) will not work if the [API](/docs/api/overview) is not set up.
+If everything is set up correctly, this should start the bot.
 
 ## More info
 
