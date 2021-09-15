@@ -5,8 +5,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Llama Bot Documentation',
   tagline: '',
-  url: 'https://llama-bot.github.io',
-  baseUrl: '/llama-bot-docs/',
+  url: 'https://docs.llama.developomp.com',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
@@ -22,22 +22,28 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
-          docId: 'intro',
-          position: 'left',
           label: 'Docs',
+          docId: 'overview',
+          type: 'doc',
+          position: 'left',
         },
         {
+          label: 'Usage',
+          docId: 'usage/overview',
           type: 'doc',
-          docId: 'bot/overview',
           position: 'left',
+        },
+        {
           label: 'Bot',
+          docId: 'bot/overview',
+          type: 'doc',
+          position: 'left',
         },
         {
+          label: 'Web interface',
+          docId: 'web-interface/overview',
           type: 'doc',
-          docId: 'api/overview',
           position: 'left',
-          label: 'API',
         },
         {
           href: 'https://github.com/llama-bot/llama-bot-docs',
