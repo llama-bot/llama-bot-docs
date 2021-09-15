@@ -4,9 +4,11 @@ sidebar_position: 2
 
 # Setting up
 
-> Use the [dev branch](https://github.com/llama-bot/llama-bot/tree/dev) (javascript) instead of the master branch (python).
+:::info
+This documentation is for the [dev branch](https://github.com/llama-bot/llama-bot/tree/dev) (javascript) instead of the master branch (python).
+:::
 
-This page will teach you how to set up the [llama discord bot](https://github.com/llama-bot/llama-bot).
+In this documentation, you will learn how to set up the [llama discord bot](https://github.com/llama-bot/llama-bot).
 
 Result:<br />
 ![example image of bot usage](/img/example.png)
@@ -23,8 +25,8 @@ Result:<br />
 
 ### Discord
 
-1. Create a new application from the [Discord Developer Portal](https://discord.com/developers/applications). Select one if you already have it. Be cautious though, since this operation is **NOT REVERSIBLE**.
-2. Make application a bot.
+1. Create a new application from the [Discord Developer Portal](https://discord.com/developers/applications). Select one if you already have it.
+2. Go to the `Bot` tab and convert your application to a discord bot. Be cautious since this operation is **NOT REVERSIBLE**.
 3. Copy the bot token. This will be used during the [Server](#server) setup.
 
 ### Firebase
@@ -33,16 +35,16 @@ Result:<br />
 
    https://console.firebase.google.com
 
-2. Create firestore database (production mode is highly recommended).
+2. Enable firestore database (usage of production mode is highly recommended).
 3. [Generate and download](https://console.firebase.google.com/project/_/settings/serviceaccounts/adminsdk) the service account key. This will be used during the [Server](#server) setup.
 
-### Bot
+### Server
 
 :::info
 Assumes UNIX-like environment (Linux, BSD, Mac, etc.)
 :::
 
-1. Clone the llama bot [repository](https://github.com/llama-bot/llama-bot) and `cd` into it.
+1. Clone the llama bot [repository](https://github.com/llama-bot/llama-bot) and open it.
 
    ```bash
    git clone https://github.com/llama-bot/llama-bot.git
@@ -64,22 +66,39 @@ Assumes UNIX-like environment (Linux, BSD, Mac, etc.)
    TOKEN=PUT_YOUR_DISCORD_BOT_TOKEN_HERE
    ```
 
-4. Create `secret` directory in the `src` directory, rename firebase admin key generated during the [Firebase](#firebase) setup to `firebase-adminsdk.json`, and put it in the `secret` directory.
+4. Create `secret` directory in the `src` directory, rename the firebase admin key generated during the [Firebase](#firebase) setup to `firebase-adminsdk.json`, and put it in the `secret` directory.
+5. Build the bot.
 
-TODO: systemd and/or auto restart/reload pm2?
+   ```bash
+   yarn build
+   ```
 
-## Testing
+6. Install pm2 globally.
 
-After following all the [steps](#steps), run the following command to start the bot:
+   ```bash
+   yarn global add pm2
+   ```
 
-```bash
-yarn start
-```
+7. Start the bot.
 
-If everything is set up correctly, this should start the bot.
+   ```bash
+   pm2 start build/index.js --watch --name "Llama Bot"
+   ```
+
+   | Option               | Explanation                                                |
+   | -------------------- | ---------------------------------------------------------- |
+   | `--watch`            | Auto restart bot if bot files have been changed            |
+   | `--name "Llama Bot"` | Set the name of the process so it can be easily recognized |
+
+8. Make the process automatically start on boot.
+
+   ```bash
+   pm2 startup
+   ```
 
 ## More info
 
-- discord developers documentation: https://discord.com/developers/docs
+- [discord developers documentation](https://discord.com/developers/docs)
 - discord API's javascript implementation [documentation](https://discord.js.org/#/docs), [guide](https://discordjs.guide), and bot [framework documentation](https://sapphiredev.github.io/framework)
-- firebase admin sdk documentation: https://firebase.google.com/docs
+- [firebase admin sdk documentation](https://firebase.google.com/docs)
+- [pm2 documentation](https://pm2.keymetrics.io/docs/usage/quick-start)
