@@ -1,17 +1,10 @@
----
-sidebar_position: 2
----
-
 # Setting up
 
 :::info
-This documentation is for the [dev branch](https://github.com/llama-bot/llama-bot/tree/dev) (javascript) instead of the master branch (python).
+This documentation uses the [dev branch](https://github.com/llama-bot/llama-bot/tree/dev) (javascript) instead of the master branch (python).
 :::
 
 In this documentation, you will learn how to set up the [llama discord bot](https://github.com/llama-bot/llama-bot).
-
-Result:<br />
-![example image of bot usage](/img/example.png)
 
 ## Steps
 
@@ -64,6 +57,10 @@ Assumes UNIX-like environment (Linux, BSD, Mac, etc.)
 
    ```text title=".env"
    TOKEN=PUT_YOUR_DISCORD_BOT_TOKEN_HERE
+   TESTING=true # set it to false on production
+   PREFIX_PROD=PUT_PRODUCTION_DEFAULT_PREFIX_HERE
+   PREFIX_DEV=PUT_DEVELOPMENT_DEFAULT_PREFIX_HERE
+   OWNER_IDS=ID1,ID2,ID3,...
    ```
 
 4. Create `secret` directory in the `src` directory, rename the firebase admin key generated during the [Firebase](#firebase) setup to `firebase-adminsdk.json`, and put it in the `secret` directory.
