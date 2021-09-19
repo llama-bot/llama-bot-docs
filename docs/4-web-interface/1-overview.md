@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Overview
 
 A full stack web graphical user interface for the [llama bot](https://github.com/llama-bot/llama-bot).
