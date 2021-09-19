@@ -1,46 +1,31 @@
----
-sidebar_position: 1
----
-
 # Overview
 
 :::warning
-**UNDER DEVELOPMENT. Not even pre-alpha**
+**The Llama Bot is under heavy development.** It can not even be called unstable. Most of the features are not written yet.
 :::
 
 :::info
-This documentation is for **developers**.<br />
-If you are a user and only want to learn how to use it, go to the [**Usage**](/docs/usage/overview) section.
+**The target audience of this documentation are developers**.<br />
+If you are a user and want to learn how to use the bot, go to the [**Usage**](/docs/usage/overview) section.
 :::
 
-The purpose of this introduction is to help developers learn how the [Llama Bot](https://github.com/developomp/llama-bot) works in **less than 5 minutes**.
-
 If you have a question or a suggestion, feel free to open a issue on the appropriate repository.<br />
-A list of all repositories can be found [here](https://github.com/llama-bot).
 
-## Discord Bot
+## Repositories
 
-https://github.com/llama-bot/llama-bot
+### [llama-bot](https://github.com/llama-bot/llama-bot)
 
-The "main" repository. The discord bot itself.
+The discord bot itself.
 
-## API
+### [llama-bot-web-interface](https://github.com/llama-bot/llama-bot-web-interface)
 
-https://github.com/llama-bot/llama-bot-web-api
+Backend and frontend code for http api and website.
 
-firebase functions http endpoints.
+### [llama-bot-docs](https://github.com/llama-bot/llama-bot-docs)
 
-## Web interface
-
-https://github.com/llama-bot/llama-bot-web-interface
-
-## Documentation
-
-https://github.com/llama-bot/llama-bot-docs
-
-What you are reading right now.
+Documentation for all llama bot related projects. You are reading it right now.
 
 ## Special thanks
 
-- `Davidisacookie#9888 (265697563280146433)` for making the [colored bot logo](/img/logo.png)
+- `Dabidoo#9888 (265697563280146433)` for making the [colored bot logo](/img/logo.png)
 - `Sɪʟᴋ Sᴘɪᴅᴇʀ#8364 (419184817368858644)` for making the [white bot logo](/img/logo-white.png)
