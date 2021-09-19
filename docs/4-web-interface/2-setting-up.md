@@ -1,12 +1,10 @@
----
-sidebar_position: 2
----
-
 # Setting up
 
 This page will teach you how to set up the [Llama bot web Interface](https://github.com/llama-bot/llama-bot-web-interface).
 
-## Pre-requirements
+## Steps
+
+### Pre-requirements
 
 - [Node.js](https://nodejs.org) version 14 or greater
 - npm & yarn (npm is included in node.js)
@@ -14,7 +12,7 @@ This page will teach you how to set up the [Llama bot web Interface](https://git
 - Google Firebase account
 - Payment method (No payment required for light usage. More info [here](https://firebase.google.com/pricing))
 
-## Discord
+### Discord
 
 1. Go to the [Discord Developer Portal](https://discord.com/developers/applications) and create an application. Select one if you already have it. Using the same application used by the discord bot is recommended.
 2. Go to the OAuth2 tab.
@@ -23,7 +21,7 @@ This page will teach you how to set up the [Llama bot web Interface](https://git
    - testing (http): `http://localhost:5000/api/auth`
    - production (https): `https://<YOUR_SITE_NAME_HERE>/api/auth` (example: `https://llama.developomp.com/api/auth`)
 
-## Firebase
+### Firebase
 
 1.  Create a firebase project. Select one if you already have it. Using the same project usd by the bot is recommended. Make sure it is using the [blaze plan](https://firebase.google.com/pricing)
 
@@ -31,7 +29,7 @@ This page will teach you how to set up the [Llama bot web Interface](https://git
 
 2.  Go to the `Firestore Database` tab and enable it. Using production mode is highly recommended.
 
-## Local
+### Local
 
 Clone the [llama-bot-web-interface](https://github.com/llama-bot/llama-bot-web-interface) repository
 
@@ -47,7 +45,7 @@ Using SSH:
 git clone git@github.com:llama-bot/llama-bot-web-interface.git
 ```
 
-## Functions
+### Functions
 
 1. Edit `functions/src/config.json`.
 
@@ -96,7 +94,7 @@ git clone git@github.com:llama-bot/llama-bot-web-interface.git
    npm run build
    ```
 
-## Frontend
+### Frontend
 
 1. Go to `frontend` directory and install dependencies.
 
@@ -110,7 +108,7 @@ git clone git@github.com:llama-bot/llama-bot-web-interface.git
    yarn build
    ```
 
-## Testing
+### Testing
 
 :::info
 Build backend and frontend code first
@@ -128,7 +126,7 @@ Build backend and frontend code first
 
 3. If everything is set up correctly, this should have added a new user in firestore database.
 
-## Deployment
+### Deployment
 
 :::warning
 Make sure to test your code before deploying to production
