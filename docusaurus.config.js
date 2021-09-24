@@ -15,10 +15,11 @@ module.exports = {
   projectName: 'llama-bot-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Llama Bot',
+      title: 'Llama Bot Docs',
       logo: {
         alt: 'Llama Bot Logo',
         src: 'img/logo.png',
+        href: '/docs/overview',
       },
       items: [
         {
