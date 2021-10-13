@@ -28,4 +28,4 @@ Arguments are extra information that are passed with the command. A command can 
 - `command <arg1>`: a required argument
 - `command <arg1> [arg2]`: a required argument and a optional one
 - `command [args]*`: arbitrary amount of optional arguments
-- `command [<arg1> <arg2>]`: either both or neither
+- `command [<arg1> <arg2>]`: neither or both
