@@ -6,8 +6,8 @@ This page will teach you how to set up the [Llama bot web Interface](https://git
 
 ### Pre-requirements
 
-- [Node.js](https://nodejs.org) version 14 or greater
-- npm & yarn (npm is included in node.js)
+- [Node.js](https://nodejs.org) version 14 or greater (version 16 is recommended)
+- yarn
 - Discord account
 - Google Firebase account
 - Payment method (No payment required for light usage. More info [here](https://firebase.google.com/pricing))
@@ -19,31 +19,16 @@ This page will teach you how to set up the [Llama bot web Interface](https://git
 3. Add the following redirects:
 
    - testing (http): `http://localhost:5000/api/auth`
-   - production (https): `https://<YOUR_SITE_NAME_HERE>/api/auth` (example: `https://llama.developomp.com/api/auth`)
+   - production (https): `https://<YOUR_SITE_NAME_HERE>/api/auth` (e.g. `https://llama.developomp.com/api/auth`)
 
 ### Firebase
 
-1.  Create a firebase project. Select one if you already have it. Using the same project usd by the bot is recommended. Make sure it is using the [blaze plan](https://firebase.google.com/pricing)
-
-    https://console.firebase.google.com
-
-2.  Go to the `Firestore Database` tab and enable it. Using production mode is highly recommended.
+1.  [Create](https://console.firebase.google.com) a firebase project. Select one if you already have it. Using the same project usd by the bot is recommended. Make sure it is using the [blaze plan](https://firebase.google.com/pricing).
+2.  Go to the `Firestore Database` tab and enable it. Usage of production mode is highly recommended.
 
 ### Local
 
-Clone the [llama-bot-web-interface](https://github.com/llama-bot/llama-bot-web-interface) repository
-
-Using HTTPS
-
-```bash
-git clone https://github.com/llama-bot/llama-bot-web-interface.git
-```
-
-Using SSH:
-
-```bash
-git clone git@github.com:llama-bot/llama-bot-web-interface.git
-```
+Clone the [llama-bot-web-interface](https://github.com/llama-bot/llama-bot-web-interface) repository.
 
 ### Functions
 
@@ -68,15 +53,15 @@ git clone git@github.com:llama-bot/llama-bot-web-interface.git
    }
    ```
 
-3. Go to [this link](https://console.firebase.google.com/project/_/settings/serviceaccounts/adminsdk), select your firebase project and download the firebase admin sdk key by pressing the "Generate new private key" button. Rename it to `firebase-adminsdk.json` and put it in `functions/src/`. This is necessary for firebase firestore database access.
+3. Visit [this link](https://console.firebase.google.com/project/_/settings/serviceaccounts/adminsdk), select your firebase project and download the firebase admin sdk key by pressing the "Generate new private key" button. Rename it to `firebase-adminsdk.json` and put it in `functions/src/`.
 
 4. Install firebase cli tools.
 
    ```bash
-   npm install -g firebase-tools
+   yarn global add firebase-tools
    ```
 
-5. Select firebase project
+5. Select firebase project. You may have to log in. You must run this command in the project root.
 
    ```bash
    firebase use <FIREBASE_PROJECT_ID_HERE>
@@ -85,27 +70,39 @@ git clone git@github.com:llama-bot/llama-bot-web-interface.git
 6. Go to `functions` directory and install necessary dependencies.
 
    ```bash
-   npm install
+   yarn install
    ```
 
 7. Build production code.
 
    ```bash
-   npm run build
+   yarn build
    ```
 
 ### Frontend
 
-1. Go to `frontend` directory and install dependencies.
+1. Go to the `frontend` directory and install dependencies.
 
    ```bash
    yarn install
    ```
 
-2. Build site for production.
+2. Test with hot reloading.
+
+   ```bash
+   yarn dev
+   ```
+
+3. Build site for production.
 
    ```bash
    yarn build
+   ```
+
+4. Preview the production build
+
+   ```bash
+   yarn preview
    ```
 
 ### Testing
