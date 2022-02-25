@@ -1,31 +1,32 @@
 # Overview
 
 :::warning
-**The Llama Bot is under heavy development.** It can not even be called unstable. Most of the features are not written yet.
+**The Llama Bot is under heavy development.**<br />
+It can not even be called unstable. Most of the features are not written yet.
 :::
 
-:::info
-**The target audience of this documentation are developers**.<br />
-If you are a user and want to learn how to use the bot, go to the [**Usage**](/docs/usage/overview) section.
-:::
+The Llama bot is a [discord](https://discord.com) bot made for the [LP community discord server](https://discord.gg/2fsar34APa).<br />
+It has a web GUI frontend for quick and easy usage, and it also has an HTTP API for more complex apps to be built on top of it.
 
-If you have a question or a suggestion, feel free to open a issue on the appropriate repository.<br />
+## FAQ
 
-## Repositories
+### Can I use this bot in my discord server?
 
-### [llama-bot](https://github.com/llama-bot/llama-bot)
+You can not invite this bot to your server, unfortunately.<br />
+However, since the source code is available on [github](https://github.com/llama-bot), you **can** set up the bot yourself though it requires quite a bit of technical knowledge.
 
-The discord bot itself.
+You need to be familiar with the following to be more specific:
 
-### [llama-bot-web-interface](https://github.com/llama-bot/llama-bot-web-interface)
+- [git](https://git-scm.com) (and [github](https://github.com))
+- [linux servers](https://www.tutorialspoint.com/unix)
+- [discord bots](https://discord.com/developers/docs)
 
-Backend and frontend code for http api and website.
+If you think you are ready to setup the bot yourself, head over to the following pages:
 
-### [llama-bot-docs](https://github.com/llama-bot/llama-bot-docs)
-
-Documentation for all llama bot related projects. You are reading it right now.
+- [Setting up the Llama bot](/docs/bot/setting-up)
+- [Setting up the web interface](/docs/web-interface/setting-up)
 
 ## Special thanks
 
-- `Dabidoo#9888 (265697563280146433)` for making the [colored bot logo](/img/logo.png)
-- `Sɪʟᴋ Sᴘɪᴅᴇʀ#8364 (419184817368858644)` for making the [white bot logo](/img/logo-white.png)
+- `Dabidoo#9888 (265697563280146433)` for making the [colored logo](/img/logo.png)
+- `Sɪʟᴋ Sᴘɪᴅᴇʀ#8364 (419184817368858644)` for making the [white logo](/img/logo-white.png)
