@@ -6,16 +6,16 @@ This page will teach you how to set up the [Llama bot web Interface](https://git
 
 ### Pre-requirements
 
-- [Node.js](https://nodejs.org) version 14 or greater (version 16 is recommended)
+- Node.js version 14 or greater (version 16 is recommended)
 - yarn
 - Discord account
-- Google Firebase account
+- Google account
 - Payment method (No payment required for light usage. More info [here](https://firebase.google.com/pricing))
 
 ### Discord
 
-1. Go to the [Discord Developer Portal](https://discord.com/developers/applications) and create an application. Select one if you already have it. Using the same application used by the discord bot is recommended.
-2. Go to the OAuth2 tab.
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications) and create an application. Select one if you already have it. You may use the same application used by the discord bot.
+2. Go to OAuth2 tab.
 3. Add the following redirects:
 
    - testing (http): `http://localhost:5000/api/auth`
@@ -23,7 +23,7 @@ This page will teach you how to set up the [Llama bot web Interface](https://git
 
 ### Firebase
 
-1.  [Create](https://console.firebase.google.com) a firebase project. Select one if you already have it. Using the same project usd by the bot is recommended. Make sure it is using the [blaze plan](https://firebase.google.com/pricing).
+1.  [Create](https://console.firebase.google.com) a firebase project. Select one if you already have it. It must be the same project used by the discord bot. Make sure it is using the [blaze plan](https://firebase.google.com/pricing).
 2.  Go to the `Firestore Database` tab and enable it. Usage of production mode is highly recommended.
 
 ### Local
@@ -43,7 +43,7 @@ Clone the [llama-bot-web-interface](https://github.com/llama-bot/llama-bot-web-i
 
    more info about discord OAuth2 scopes can be found in the [discord developers documentation](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes)
 
-2. Create `functions/src/secret.json` and fill in the data.
+2. Create `functions/src/secret.json`.
 
    ```json title="functions/src/secret.json"
    {
@@ -53,21 +53,21 @@ Clone the [llama-bot-web-interface](https://github.com/llama-bot/llama-bot-web-i
    }
    ```
 
-3. Visit [this link](https://console.firebase.google.com/project/_/settings/serviceaccounts/adminsdk), select your firebase project and download the firebase admin sdk key by pressing the "Generate new private key" button. Rename it to `firebase-adminsdk.json` and put it in `functions/src/`.
+3. Visit [this link](https://console.firebase.google.com/project/_/settings/serviceaccounts/adminsdk), select your firebase project and download the firebase admin sdk key by pressing the "Generate new private key" button. Rename the downloaded file to `firebase-adminsdk.json` and put it in the `functions/src/` directory.
 
-4. Install firebase cli tools.
+4. Install firebase tools.
 
    ```bash
    yarn global add firebase-tools
    ```
 
-5. Select firebase project. You may have to log in. You must run this command in the project root.
+5. Select your firebase project. You must run this command in the project root.
 
    ```bash
    firebase use <FIREBASE_PROJECT_ID_HERE>
    ```
 
-6. Go to `functions` directory and install necessary dependencies.
+6. Go to the `functions` directory and install the dependencies.
 
    ```bash
    yarn install
@@ -81,7 +81,7 @@ Clone the [llama-bot-web-interface](https://github.com/llama-bot/llama-bot-web-i
 
 ### Frontend
 
-1. Go to the `frontend` directory and install dependencies.
+1. Go to the `frontend` directory and install the dependencies.
 
    ```bash
    yarn install
@@ -107,27 +107,13 @@ Clone the [llama-bot-web-interface](https://github.com/llama-bot/llama-bot-web-i
 
 ### Testing
 
-:::info
-Build backend and frontend code first
-:::
+After building the backend and the frontend code, run the following command to start a local test server:
 
-1. Start local test server by running the following command:
-
-   ```bash
-   firebase serve
-   ```
-
-2. Open locally served test site and log in with your discord account.
-
-   [http://localhost:5000](http://localhost:5000) <!-- Docusaurus does not automatically create a link -->
-
-3. If everything is set up correctly, this should have added a new user in firestore database.
+```bash
+firebase serve
+```
 
 ### Deployment
-
-:::warning
-Make sure to test your code before deploying to production
-:::
 
 Deploying the code to production is as simple as running the following command:
 
@@ -137,13 +123,13 @@ firebase deploy
 
 The deployment could take a while so be patient.
 
-To deploy frontend code only:
+Deploying frontend code only:
 
 ```bash
 firebase deploy --only hosting
 ```
 
-To deploy backend code only:
+Deploying backend code only:
 
 ```bash
 firebase deploy --only functions
@@ -151,5 +137,6 @@ firebase deploy --only functions
 
 ## More info
 
-- discord developers documentation: https://discord.com/developers/docs
-- firebase admin sdk documentation: https://firebase.google.com/docs
+- [discord developers documentation](https://discord.com/developers/docs)
+- [firebase admin sdk documentation](https://firebase.google.com/docs)
+- [firebase functions documentation](https://firebase.google.com/docs/functions/typescript)
