@@ -1,31 +1,85 @@
 # Overview
 
-Work in progress...
+If you are a non-technical discord user and want to learn how to use the Llama bot, you've come to the right place.
+In this page, you'll learn the basics of discord bots, what the Llama bot can do, and how to use it.
 
-Explain:
+## Background
 
-- what bots are
-- what commands are
-  - what prefixes are
-    - ping prefix
-    - default prefix
-    - how different servers can have different prefixes
+### What even is a discord bot?
 
-## How to read documentation
+In essence, a Discord bot is a account controlled by a program.
+It is used in almost ever server for many different reasons such as automating moderation, music streaming, and even dad jokes.
 
-Arguments are extra information that are passed with the command. A command can have any number arguments and they could either be required or optional.
+### Great! Now, how do I use a bot?
 
-### Searching
+Although some bots — including the Llama bot — offers a web interface, most bots are controlled by commands.
+Commands are messages that is prefixed with special letter(s) that tells what a bot should do.
 
-### Commands
+Here's an example of a command:
 
-#### Required arguments
+```
+-help
+```
 
-#### Optional arguments
+Here, the hyphen (`-`) is the prefix and `help` is the command.
+When messages are formatted like this, bots can identify whether a message is a command or not, and if the command is meant for them or some other bot.
+This is helpful when there are multiple bots in one server.
+Commonly used prefixes are: `?`, `!`, `>`, `.`, `..`, etc.
 
-#### Examples
+Although Discord released [slash commands](https://discord.com/blog/slash-commands-are-here) in 2021, it is not used by most bot developers.
 
-- `command <arg1>`: a required argument
-- `command <arg1> [arg2]`: a required argument and a optional one
-- `command [args]*`: arbitrary amount of optional arguments
-- `command [<arg1> <arg2>]`: neither or both
+### Commands are not enough!
+
+Although commands are awesome, sometimes it is not enough to tell what exactly you want the bot to do.
+This is why you need arguments.
+
+Here's an example of a command with arguments:
+
+```
+-ban @NaughtyUser @BadUser @GPUScalper69
+```
+
+Arguments are extra text information that are passed with the command.
+Arguments could be a user, a text channel, regular text, numbers, or even emojis.
+They are usually separated by spaces.
+If you provide more arguments than what's required, they will simply be ignored.
+
+## How to read the documentation
+
+WIP
+
+<!-- list of commands. Web interface instruction will be included if it exists -->
+
+### Required arguments
+
+WIP
+
+### Optional arguments
+
+WIP
+
+### Examples
+
+#### A command with one required argument
+
+```
+-command <arg1>
+```
+
+#### A command with a required argument and a optional one
+
+```
+-command <arg1> [arg2]
+```
+
+#### A command with arbitrary amount of optional arguments
+
+```
+-command [args]*
+```
+
+#### A command that takes neither or both arguments
+
+```
+-command [<arg1> <arg2>]
+```
