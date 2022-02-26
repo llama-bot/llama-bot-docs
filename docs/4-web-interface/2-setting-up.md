@@ -135,6 +135,27 @@ Deploying backend code only:
 firebase deploy --only functions
 ```
 
+### Automated deployment
+
+If you are using github, you can easily automate the deployment process.
+The web interface repository is configured to use [Github action](https://github.com/features/actions) to automatically deploy changes made to the `master` branch.
+We recommend you do the development in the `dev` branch and put production code in the `master` branch.
+
+Go to repository Settings > Secrets (side bar) > Actions (dropdown)<br />
+and create the following secrets by clicking the New repository secret button.
+
+- `FIREBASE_TOKEN`
+
+You can get this by running the following command:
+
+```bash
+firebase login:ci
+```
+
+- `FIREBASE_PROJECT`
+
+This is the firebase project ID you are using. It should be inside the `.firebaserc` file.
+
 ## More info
 
 - [discord developers documentation](https://discord.com/developers/docs)
