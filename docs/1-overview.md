@@ -26,6 +26,10 @@ If you think you are ready to setup the bot yourself, head over to the following
 - [Setting up the Llama bot](/docs/bot/setting-up)
 - [Setting up the web interface](/docs/web-interface/setting-up)
 
+### I want to contribute! Where do I start?
+
+If you are a developer and want to contribute to the project, the [contribution guide](https://github.com/llama-bot/llama-bot/blob/master/CONTRIBUTING.md) should be a good place to start.
+
 ## Special thanks
 
 - `Dabidoo#9888 (265697563280146433)` for making the [colored logo](/img/logo.png)
