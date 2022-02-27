@@ -156,6 +156,14 @@ firebase login:ci
 
 This is the firebase project ID you are using. It should be inside the `.firebaserc` file.
 
+- `SECRET_JSON`
+
+Content of `functions/src/secret.json`
+
+- `FIREBASE_ADMINSDK_JSON`
+
+Content of `functions/src/firebase-adminsdk.json`
+
 ## More info
 
 - [discord developers documentation](https://discord.com/developers/docs)
