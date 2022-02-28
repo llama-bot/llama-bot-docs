@@ -83,3 +83,9 @@ WIP
 ```
 -command [<arg1> <arg2>]
 ```
+
+#### A command that only takes either "a" or "b"
+
+```
+-command ["a"|"b"]
+```
