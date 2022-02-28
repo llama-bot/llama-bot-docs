@@ -87,5 +87,5 @@ WIP
 #### A command that only takes either "a" or "b"
 
 ```
--command ["a"|"b"]
+-command <"a"|"b">
 ```
