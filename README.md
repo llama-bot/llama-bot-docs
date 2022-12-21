@@ -1,3 +1,3 @@
 # llama-bot-docs
 
-## [Documentation](https://docs.llama.developomp.com)
+**This project is dead.**
